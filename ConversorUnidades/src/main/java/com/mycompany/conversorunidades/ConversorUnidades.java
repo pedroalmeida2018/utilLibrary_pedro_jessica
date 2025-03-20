@@ -1,4 +1,5 @@
 package com.mycompany.conversorunidades;
+import java.util.Scanner;
 
    
     public class ConversorUnidades {
@@ -176,8 +177,5 @@ package com.mycompany.conversorunidades;
         }
     }
     
-        public static void main(String[] args) {
-            System.out.println("Hello World!");
-        }
 }
 
