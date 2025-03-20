@@ -10,19 +10,6 @@ import java.util.LinkedList;
  */
 
 public class Fifo{
-    private LinkedList buffer = new LinkedList<>();
-
-    public void adicionarElemento(T elemento) {
-        buffer.addLast(elemento);
-    }
-
-    public void removerElemento() {
-        return buffer.pollFirst(); // Remove o primeiro elemento (FIFO)
-    }
-
-    public void listarElementos() {
-        System.out.println(buffer);
-    }
+    
 }
     
-

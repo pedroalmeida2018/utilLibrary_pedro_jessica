@@ -23,12 +23,12 @@ public class Teste_main {
 
         System.out.println("Conversor de Unidades!");
         System.out.println("Escolha uma categoria para conversão:");
-        System.out.println("1 - Temperatura");
-        System.out.println("2 - Distância");
-        System.out.println("3 - Peso");
-        System.out.println("4 - Tempo");
-        System.out.println("5 - Velocidade");
-        System.out.println("6 - Área");
+        System.out.println("1 - Temperatura -> (Celsius, Fahreneit, Kelvin)");
+        System.out.println("2 - Distância -> (Metros, Quilometros, Milhas, Jardas)");
+        System.out.println("3 - Peso -> (Gramas, Quilogramas, Libras, Onças)");
+        System.out.println("4 - Tempo -> (Segundos, Minutos, Horas, Dias)");
+        System.out.println("5 - Velocidade -> (Metros/segundo, Quilometros/hora, Milhas/hora, Nós)");
+        System.out.println("6 - Área -> (Metros quadrados, Quilometros quadrados, Hectares, Acres)");
 
         int opcao = scanner.nextInt();
         scanner.nextLine(); // Consumir quebra de linha
