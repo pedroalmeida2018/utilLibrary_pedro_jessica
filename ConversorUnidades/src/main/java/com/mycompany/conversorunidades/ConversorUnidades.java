@@ -137,8 +137,72 @@ public class ConversorUnidades {
         }
     }
     
+   public static class Tempo {
+
+        // Conversão de Segundos para Minutos
+        public static double segundosMinutos(double segundos) {
+            return segundos / 60;
+        }
+
+        // Conversão de Minutos para Segundos
+        public static double minutosSegundos(double minutos) {
+            return minutos * 60;
+        }
+
+        // Conversão de Minutos para Horas
+        public static double minutosHoras(double minutos) {
+            return minutos / 60;
+        }
+
+        // Conversão de Horas para Minutos
+        public static double horasMinutos(double horas) {
+            return horas * 60;
+        }
+
+        // Conversão de Horas para Dias
+        public static double horasDias(double horas) {
+            return horas / 24;
+        }
+
+        // Conversão de Dias para Horas
+        public static double diasHoras(double dias) {
+            return dias * 24;
+        }
+
+        // Conversão de Segundos para Horas
+        public static double segundosHoras(double segundos) {
+            return segundos / 3600; // 1 hora = 3600 segundos
+        }
+
+        // Conversão de Horas para Segundos
+        public static double horasSegundos(double horas) {
+            return horas * 3600;
+        }
+
+        // Conversão de Segundos para Dias
+        public static double segundosDias(double segundos) {
+            return segundos / 86400; // 1 dia = 86400 segundos
+        }
+
+        // Conversão de Dias para Segundos
+        public static double diasSegundos(double dias) {
+            return dias * 86400;
+        }
+
+        // Conversão de Minutos para Dias
+        public static double minutosDias(double minutos) {
+            return minutos / 1440; // 1 dia = 1440 minutos
+        }
+
+        // Conversão de Dias para Minutos
+        public static double diasMinutos(double dias) {
+            return dias * 1440;
+        }
+    }
+
+    
         public static void main(String[] args) {
             System.out.println("Hello World!");
         }
-    }
+}
 
