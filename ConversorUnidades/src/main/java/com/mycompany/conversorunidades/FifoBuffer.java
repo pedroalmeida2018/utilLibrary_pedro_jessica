@@ -1,28 +1,9 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.mycompany.conversorunidades;
 import java.util.LinkedList;
-<<<<<<< HEAD:ConversorUnidades/src/main/java/com/mycompany/conversorunidades/Fifo.java
-
-// Implementação de FIFO (First In, First Out)
-class Fifo <T> {
-    private LinkedList<T> fila = new LinkedList<>();
-
-    public void adicionarElemento(T elemento) {
-        fila.addLast(elemento);
-    }
-
-    public T removerElemento() {
-        if (!fila.isEmpty()) {
-            return fila.removeFirst();
-        } else {
-            System.out.println("A fila está vazia!");
-            return null;
-        }
-    }
-
-    public void listarElementos() {
-        System.out.println("FIFO Buffer: " + fila);
-=======
 import java.util.Queue;
 import java.util.Stack;
 
@@ -48,6 +29,5 @@ class FifoBuffer<T> {
 
     public void listarElementos() {
         System.out.println("Elementos na Fila: " + fila);
->>>>>>> eea4e25f40a591077a2df8a3a449f4f8050c48d5:ConversorUnidades/src/main/java/com/mycompany/conversorunidades/FifoBuffer.java
     }
 }

@@ -22,7 +22,7 @@ public class Teste_main {
             System.out.println("\nOpção: ");
             
 
-            int opcao = scanner.nextInt();
+            int opcao = scanner.nextInt();                                                                                                                             
             scanner.nextLine();
 
             if (opcao == 0) {
@@ -33,25 +33,27 @@ public class Teste_main {
             switch (opcao) {
                 case 1:
                     System.out.println("Conversor de Unidades!");
-                    System.out.println("Escolha uma categoria para conversão:");
-                    System.out.println("1 - Temperatura -> (Celsius, Fahreneit, Kelvin)");
-                    System.out.println("2 - Distância -> (Metros, Quilometros, Milhas, Jardas)");
-                    System.out.println("3 - Peso -> (Gramas, Quilogramas, Libras, Onças)");
-                    System.out.println("4 - Tempo -> (Segundos, Minutos, Horas, Dias)");
-                    System.out.println("5 - Velocidade -> (Metros/segundo, Quilometros/hora, Milhas/hora, Nós)");
-                    System.out.println("6 - Área -> (Metros quadrados, Quilometros quadrados, Hectares, Acres)");
+                    System.out.println("Escolha uma categoria para converter:");
+                    System.out.println("--------------------------------------------------------------");
+                    System.out.println("|    1    |   Temperatura ->   C | F | K                     |");
+                    System.out.println("|    2    |   Distância ->   m |km | mi | yd                 |");
+                    System.out.println("|    3    |   Peso ->   g | kg | lb | oz                     |");
+                    System.out.println("|    4    |   Tempo ->   s | min | h | d                     |");
+                    System.out.println("|    5    |   Velocidade ->   m/s | km/h | mph | kn          |");
+                    System.out.println("|    6    |   Área ->   m/quadrado | k/quadrado | ha | ac    |");
+                    System.out.println("--------------------------------------------------------------");
 
                     int escolha = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Digite o valor a ser convertido: ");
+                    System.out.print("Insere o valor que pretendes converter: ");
                     double valor = scanner.nextDouble();
                     scanner.nextLine();
 
-                    System.out.print("Digite a unidade de origem: ");
+                    System.out.print("Digite a unidade de medida a converter: ");
                     String unidadeOrigem = scanner.nextLine();
 
-                    System.out.print("Digite a unidade de destino: ");
+                    System.out.print("Digite a unidade de medida para a qual quer converter: ");
                     String unidadeDestino = scanner.nextLine();
 
                     double resultado = 0;
@@ -87,7 +89,10 @@ public class Teste_main {
                     break;
 
                 case 2: // FIFO
-                    System.out.println("Escolha uma ação para FIFO:");
+                    System.out.println("\n------------------------------------------------------------------");
+                    System.out.println("|  FIFO (First-In, First-Out): é um método, em que o             |\n|  primeiro elemento a entrar na estrutura é o primeiro a sair.  |");
+                    System.out.println("------------------------------------------------------------------");
+                    System.out.println("\nPretende armazenar dados? Se sim, escolha uma ação para FIFO:");
                     System.out.println("1 -> Adicionar elemento");
                     System.out.println("2 -> Remover elemento");
                     System.out.println("3 -> Listar elementos");
@@ -100,21 +105,28 @@ public class Teste_main {
                         System.out.print("Digite um elemento para adicionar à fila: ");
                         String elemento = scanner.nextLine();
                         fifo.adicionarElemento(elemento);
+                        
                     } else if (acaoFifo == 2) {
                         String removido = fifo.removerElemento();
                         System.out.println("Elemento removido: " + (removido != null ? removido : "Fila vazia"));
+                        
                     } else if (acaoFifo == 3) {
                         fifo.listarElementos(); 
+                        
                     } else {
                         System.out.println("Opção inválida!");
                     }
                     break;
 
                 case 3: // LIFO
-                    System.out.println("Escolha uma ação para LIFO:");
+                     System.out.println("\n------------------------------------------------------------------");
+                    System.out.println("|  LIFO (Last-In, First-Out): é um método, em que o             |\n|  último elemento a entrar na estrutura é o primeiro a sair.  |");
+                    System.out.println("------------------------------------------------------------------");
+                    System.out.println("\nPretende armazenar dados? Se sim, escolha uma ação para LIFO:");
                     System.out.println("1 - Adicionar elemento");
                     System.out.println("2 - Remover elemento");
                     System.out.println("3 - Listar elementos");
+                    System.out.println("0 -> Voltar\n");
 
                     int acaoLifo = scanner.nextInt();
                     scanner.nextLine();
@@ -140,84 +152,4 @@ public class Teste_main {
 
         scanner.close();
     }
-}
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-/**package com.mycompany.conversorunidades;
-
-import static com.mycompany.conversorunidades.ConversorUnidades.converterArea;
-import static com.mycompany.conversorunidades.ConversorUnidades.converterDistancia;
-import static com.mycompany.conversorunidades.ConversorUnidades.converterPeso;
-import static com.mycompany.conversorunidades.ConversorUnidades.converterTemperatura;
-import static com.mycompany.conversorunidades.ConversorUnidades.converterTempo;
-import static com.mycompany.conversorunidades.ConversorUnidades.converterVelocidade;
-import java.util.Scanner;
-
-/**
- *
- * @author Pedro Almeida
- *//**
-public class Teste_main {
-
-  public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Conversor de Unidades!");
-        System.out.println("Escolha uma categoria para conversão:");
-        System.out.println("1 - Temperatura -> (Celsius, Fahreneit, Kelvin)");
-        System.out.println("2 - Distância -> (Metros, Quilometros, Milhas, Jardas)");
-        System.out.println("3 - Peso -> (Gramas, Quilogramas, Libras, Onças)");
-        System.out.println("4 - Tempo -> (Segundos, Minutos, Horas, Dias)");
-        System.out.println("5 - Velocidade -> (Metros/segundo, Quilometros/hora, Milhas/hora, Nós)");
-        System.out.println("6 - Área -> (Metros quadrados, Quilometros quadrados, Hectares, Acres)");
-
-        int opcao = scanner.nextInt();
-        scanner.nextLine(); // Consumir quebra de linha
-
-        System.out.print("Digite o valor a ser convertido: ");
-        double valor = scanner.nextDouble();
-        scanner.nextLine(); // Consumir quebra de linha
-
-        System.out.print("Digite a unidade de origem: ");
-        String unidadeOrigem = scanner.nextLine();
-
-        System.out.print("Digite a unidade de destino: ");
-        String unidadeDestino = scanner.nextLine();
-
-        double resultado = 0;
-
-        try {
-            switch (opcao) {
-                case 1:
-                    resultado = converterTemperatura(valor, unidadeOrigem, unidadeDestino);
-                    break;
-                case 2:
-                    resultado = converterDistancia(valor, unidadeOrigem, unidadeDestino);
-                    break;
-                case 3:
-                    resultado = converterPeso(valor, unidadeOrigem, unidadeDestino);
-                    break;
-                case 4:
-                    resultado = converterTempo(valor, unidadeOrigem, unidadeDestino);
-                    break;
-                case 5:
-                    resultado = converterVelocidade(valor, unidadeOrigem, unidadeDestino);
-                    break;
-                case 6:
-                    resultado = converterArea(valor, unidadeOrigem, unidadeDestino);
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
-                    return;
-            }
-            System.out.println("Resultado: " + valor + " " + unidadeOrigem + " = " + resultado + " " + unidadeDestino);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Erro: " + e.getMessage());
-        }
-
-        scanner.close();
-    }
-}
-*/   
+}  
